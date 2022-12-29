@@ -12,16 +12,27 @@ board_width = 3
 
 
 def display_board(board, line_width):
+    '''
+    :param board: An array of element values - the number of which is a multiple of line_width
+    :param line_width: Board length horizontally and vertically
+    :return: Board with separator | with the number of characters in width and height equal to line_width
+    '''
     os.system('cls')
 
     current_line = "|"
+    final_board = ""
     for index, item in enumerate(board):
         current_line += item + '|'
         current_item_number = index + 1
 
         if current_item_number % line_width == 0:
-            print(current_line)
+            final_board += current_line + "\n"
             current_line = "|"
 
+    return final_board
 
-display_board(demo_board, board_width)
+
+board = display_board(demo_board, board_width)
+print(board)
+
+

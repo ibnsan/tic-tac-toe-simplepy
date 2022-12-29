@@ -26,6 +26,21 @@ def get_board_width():
 board_width = get_board_width()
 
 
+def create_board(board_width):
+    '''
+    :param board_width: Playing board width in numbers
+    :return: Playboard array where each cell corresponds to an index
+    '''
+    board_size = board_width * board_width
+    board = []
+    for cell_number in range(board_size):
+        board.append(str(cell_number))
+    return board
+
+
+game_board = create_board(board_width)
+
+
 def display_board(board, line_width):
     '''
     :param board: An array of element values - the number of which is a multiple of line_width
@@ -47,5 +62,5 @@ def display_board(board, line_width):
     return final_board
 
 
-board = display_board(demo_board, board_width)
+board = display_board(game_board, board_width)
 print(board)

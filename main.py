@@ -10,20 +10,20 @@ import os
 demo_board = ['x', 'o', 'x', 'o', 'x', 'o', 'x', 'o', 'x']
 
 
-def get_board_length():
+def get_board_width():
     '''
     Asks the user for the width of the board in numbers and returns that width
     :return: Playing board width in numbers above 2
     '''
-    length = 0
-    while not (isinstance(int(length), int) and int(length) > 2 and int(length) < 24):
-        length = input(
+    width = 0
+    while not (isinstance(int(width), int) and int(width) > 2 and int(width) < 24):
+        width = input(
             "Specify the length of the playing board (the length must be in numbers and greater than 2): ")
 
-    return int(length)
+    return int(width)
 
 
-board_width = get_board_length()
+board_width = get_board_width()
 
 
 def display_board(board, line_width):

@@ -80,3 +80,13 @@ def display_board(board, line_width):
 
 board = display_board(game_board, board_width)
 print(board)
+
+
+def place_marker(board, marker, position):
+    """
+    Places the user marker on the specified cell in the table
+    :param board: An array of element values
+    :param marker: Character (x or y) selected by the user
+    :param position: Index from board array
+    """
+    board[position] = marker

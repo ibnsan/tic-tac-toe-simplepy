@@ -85,7 +85,7 @@ print(board)
 def place_marker(board, marker, position):
     """
     Places the user marker on the specified cell in the table
-    :param board: An array of element values
+    :param board: List of indexes - markers of the currently created board
     :param marker: Character (x or y) selected by the user
     :param position: Index from board array
     """

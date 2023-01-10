@@ -38,9 +38,9 @@ def create_board(board_width):
     return board
 
 
-def select_symbol():
+def select_marker():
     """
-    :return: Selected user characters (x or y)
+    :return: Selected user markers (x or y)
     """
     marker = ''
     while not (marker == "X" or marker == "O"):
@@ -52,7 +52,7 @@ def select_symbol():
         return ("o", "x")
 
 
-player1_marker, player2_marker = select_symbol()
+player1_marker, player2_marker = select_marker()
 
 game_board = create_board(board_width)
 
